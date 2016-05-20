@@ -1,0 +1,31 @@
+﻿<template>
+    <div class="container">
+        <input type="text" placeholder="Id del alumno" value.bind="idAlumno" />
+        <button click.trigger="getById(idAlumno)" class="btn btn-default">Consultar</button>
+        <a class="btn btn-default" route-href="route: create">Crear Alumno</a>
+        <br />
+        <label>${error}</label>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Sexo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr repeat.for="alumno of alumnos">
+                <td>${alumno.IdAlumno}</td>
+                <td>${alumno.Nombre}</td>
+                <td>${alumno.Apellido}</td>
+                <td>${alumno.Edad}</td>
+                <td></td>
+                <td>
+                    <a route-href="route: details; params.bind: { id: alumno.IdAlumno }" class="btn btn-default">Detalle</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</template>

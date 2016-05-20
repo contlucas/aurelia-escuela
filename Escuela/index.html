@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="app/jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap.css" rel="stylesheet" />
+    <link href="app/jspm_packages/npm/font-awesome@4.6.1/css/font-awesome.css" rel="stylesheet" />
+    <link href="app/jspm_packages/npm/mocha@2.4.5/mocha.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="mocha"></div>
+    <script src="app/jspm_packages/system.js"></script>
+    <script src="app/config.js"></script>
+    <div aurelia-app="main">
+        <script>
+            System.import("aurelia-bootstrapper")
+                .then(function () {
+                    return System.import("./test/test");
+                });
+        </script>
+    </div>
+</body>
+</html>
