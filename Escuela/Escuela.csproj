@@ -85,6 +85,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\alumnos\details.html" />
     <Content Include="packages.config" />
     <Content Include="tsconfig.json" />
     <None Include="Web.Debug.config">
@@ -118,7 +119,8 @@
     <TypeScriptCompile Include="app\alumnos\alumnoData.ts" />
     <TypeScriptCompile Include="app\alumnos\alumnos.ts" />
     <TypeScriptCompile Include="app\alumnos\create.ts" />
-    <TypeScriptCompile Include="app\alumnos\IAlumno.ts" />
+    <TypeScriptCompile Include="app\alumnos\details.ts" />
+    <TypeScriptCompile Include="app\alumnos\ModuloAlumno.ts" />
     <TypeScriptCompile Include="app\app.ts" />
     <TypeScriptCompile Include="app\default.ts" />
     <TypeScriptCompile Include="app\main.ts" />

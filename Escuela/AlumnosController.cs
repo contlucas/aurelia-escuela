@@ -69,5 +69,5 @@ namespace Escuela
         public int Edad { get; set; }
         public TipoSexo Sexo { get; set; }
     }
-    public enum TipoSexo { Masculino, Femenino }
+    public enum TipoSexo { Masculino = 0, Femenino = 1 }
 }

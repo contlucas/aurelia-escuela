@@ -3,32 +3,37 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panel-title">
-                    <h3>Crear alumno ${alumno.Nombre}</h3>
+                    <h3>Detalle de ${alumno.Nombre}</h3>
                 </div>
             </div>
             <div class="panel-body">
-                <form class="form-horizontal">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Id del alumno</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" value.bind="alumno.IdAlumno" disabled="disabled" />
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Nombre</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" value.bind="alumno.Nombre" />
+                            <input type="text" class="form-control" value.bind="alumno.Nombre" disabled="disabled" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Apellido</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" value.bind="alumno.Apellido" />
+                            <input type="text" class="form-control" value.bind="alumno.Apellido" disabled="disabled" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Edad</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" value.bind="alumno.Edad" />
+                            <input type="text" class="form-control" value.bind="alumno.Edad" disabled="disabled" />
                         </div>
                     </div>
-                    <!--<input type="submit" value="Guardar" class="btn btn-default" />-->
-                    <button class="btn btn-default" click.trigger="saveAlumno()">Guardar</button>
-                </form>
+                    <a route-href="route: alumnos" class="btn btn-default">Volver</a>
+                </div>
             </div>
         </div>
     </div>

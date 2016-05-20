@@ -2,14 +2,14 @@
 import * as chai from "chai";
 import * as chaiAsPromised from "chai-as-promised";
 import {AlumnoData} from "../app/alumnos/alumnoData";
-import {IAlumno} from "../app/alumnos/IAlumno";
+import {ModuloAlumno} from "../app/alumnos/ModuloAlumno";
 
 chai.use(chaiAsPromised);
 
 let expect = chai.expect;
 let should = chai.should;
 let alumnoTest = new AlumnoData();
-let alumno: IAlumno;
+let alumno: ModuloAlumno.IAlumno;
 
 mocha.setup({
     ui: "bdd",

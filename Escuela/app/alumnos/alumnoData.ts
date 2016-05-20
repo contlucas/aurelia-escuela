@@ -1,14 +1,14 @@
 ﻿import {inject} from "aurelia-framework";
 import {HttpClient} from "aurelia-http-client";
-import {IAlumno} from "IAlumno";
+import {ModuloAlumno} from "./ModuloAlumno";
 
 let urlBase = "api/alumnos";
 
 @inject(HttpClient)
 export class AlumnoData {
     private http: HttpClient;
-    private alumno: IAlumno;
-
+    private alumno: ModuloAlumno.IAlumno;
+    
     constructor() {
         this.http = new HttpClient();
     }
@@ -23,7 +23,7 @@ export class AlumnoData {
             .then(response => { return response });
     }
 
-    saveAlumno(alumno: IAlumno) {
+    saveAlumno(alumno: ModuloAlumno.IAlumno) {
         var request = this.http.createRequest(urlBase);
 
         request.asPost()
@@ -32,5 +32,13 @@ export class AlumnoData {
             .withContent(alumno);
 
         return request.send().then(response => response);
+    }
+
+    editAlumno(alumno: ModuloAlumno.IAlumno) {
+
+    }
+
+    deleteAlumno(id: any) {
+
     }
 }

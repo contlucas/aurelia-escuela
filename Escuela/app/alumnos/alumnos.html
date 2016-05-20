@@ -17,11 +17,11 @@
                 </tr>
             </thead>
             <tr repeat.for="alumno of alumnos">
-                <td>${alumno.IdAlumno}</td>
-                <td>${alumno.Nombre}</td>
-                <td>${alumno.Apellido}</td>
-                <td>${alumno.Edad}</td>
-                <td></td>
+                <td>${ alumno.IdAlumno }</td>
+                <td>${ alumno.Nombre }</td>
+                <td>${ alumno.Apellido }</td>
+                <td>${ alumno.Edad }</td>
+                <td>${ alumno.SexoString }</td>
                 <td>
                     <a route-href="route: details; params.bind: { id: alumno.IdAlumno }" class="btn btn-default">Detalle</a>
                 </td>

@@ -1,10 +1,11 @@
 ﻿import {inject} from "aurelia-framework";
 import {AlumnoData} from "./alumnoData";
+import {ModuloAlumno} from "./ModuloAlumno";
 
 @inject(AlumnoData)
 export class Alumno {
     private alumnoData: AlumnoData;
-    public alumnos: AlumnoData[];
+    public alumnos: ModuloAlumno.IAlumno[];
     public error: string;
 
     constructor(alumnoData: AlumnoData) {
@@ -16,15 +17,21 @@ export class Alumno {
         this.error = "";
 
         return this.alumnoData.getById(id)
-            .then((alumno: any) => {
+            .then(alumno => {
                 this.alumnos.push(alumno.content);
             })
-            .catch((error: any) => {
+            .catch(error => {
                 this.error = error.statusText;
             });
     }
 
     activate() {
-        return this.alumnoData.getAll().then((alumnos: any) => { this.alumnos = alumnos.content });
+        return this.alumnoData.getAll().then(response => {
+            this.alumnos = response.content;
+
+            for (var x = 0; x < this.alumnos.length; x++) {
+                this.alumnos[x].SexoString = ModuloAlumno.TipoSexo[this.alumnos[x].Sexo];
+            }
+        });
     }
 }
