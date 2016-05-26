@@ -33,6 +33,7 @@ namespace Escuela
         // GET api/<controller>
         public IEnumerable<Alumno> Get()
         {
+            System.Threading.Thread.Sleep(1000);
             return alumnos;
         }
 
